@@ -6,7 +6,97 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Scenes/SampleScene.unity
+    path: Assets/Scenes/Tracker_test.unity
     guid: 2cda990e2423bbf4892e6590ba056729
+  - enabled: 1
+    path: Assets/Scenes/Menu.unity
+    guid: 3c1d717913452e34ba57f57e89ce5f2b
+  - enabled: 1
+    path: Assets/Scenes/Stories/StoriesScene.unity
+    guid: 988d885f453130d49b355b50eebd84dc
+  - enabled: 1
+    path: Assets/Scenes/Stories/Le lion et le lapin/Scene1.unity
+    guid: 5cab05d7718ca4446b78d1d8829e9442
+  - enabled: 1
+    path: Assets/Scenes/Stories/Le lion et le lapin/Scene2.unity
+    guid: 90d9bcdcf5749d740a2272001eb8b460
+  - enabled: 1
+    path: Assets/Scenes/Stories/Le lion et le lapin/Scene3.unity
+    guid: ae799a096d9957f4993908751ba6c84d
+  - enabled: 1
+    path: Assets/Scenes/Stories/Le lion et le lapin/Scene4.unity
+    guid: 4a370079be582104fbef4ac090ccae9e
+  - enabled: 1
+    path: Assets/Scenes/Stories/Le lion et le lapin/Scene5.unity
+    guid: 61e1da9630c7cd248ac5ab90cefc85f6
+  - enabled: 1
+    path: Assets/Scenes/Stories/Le lion et le lapin/Scene6.unity
+    guid: 4e2a3d847b430c141b88f467c4fd4d3d
+  - enabled: 1
+    path: Assets/Scenes/Stories/Le lion et le lapin/Scene7.unity
+    guid: a359f81f77779264d90a95bab4354e50
+  - enabled: 1
+    path: Assets/Scenes/Stories/Le lion et le lapin/Scene8.unity
+    guid: 914f4de692ed4b64d8c524e815706686
+  - enabled: 1
+    path: Assets/Scenes/Stories/Le lion et le lapin/Scene9.unity
+    guid: cec707db48f16694187520d828d927c1
+  - enabled: 1
+    path: Assets/Scenes/Stories/Le lion et le lapin/Scene10.unity
+    guid: 731a961bfa7aa754fa069cb4dba3b3d6
+  - enabled: 1
+    path: Assets/Scenes/Stories/Le lion et le lapin/Scene11.unity
+    guid: 6f4cee8f6fedeff4fa097429a7d26bc6
+  - enabled: 1
+    path: Assets/Scenes/Stories/Ringo/RingoScene1.unity
+    guid: 6f7ec2b10175b9147a0e59321595556e
+  - enabled: 1
+    path: Assets/Scenes/Stories/Ringo/RingoScene2.unity
+    guid: 0419d412a09d45144a3f7b2eae2e87fa
+  - enabled: 1
+    path: Assets/Scenes/Stories/Ringo/RingoScene3.unity
+    guid: 197b1444b2cb83a4090a5c895e4c9d1f
+  - enabled: 1
+    path: Assets/Scenes/Stories/Ringo/RingoScene4.unity
+    guid: e750d9eacc0b4b140b5128676be6604b
+  - enabled: 1
+    path: Assets/Scenes/Stories/Ringo/RingoScene5.unity
+    guid: 1ade58f3a889151499e9acf50040fd15
+  - enabled: 1
+    path: Assets/Scenes/Stories/Ringo/RingoScene6.unity
+    guid: 5fe50740aa49fd646bc36d2a3db95121
+  - enabled: 1
+    path: Assets/Scenes/Stories/Ringo/RingoScene7.unity
+    guid: ade9b85e336b19f41a32d45e83dc6090
+  - enabled: 1
+    path: Assets/Scenes/Stories/Ringo/RingoScene8.unity
+    guid: 536cdedef69ab654892e248b4bb00782
+  - enabled: 1
+    path: Assets/Scenes/Stories/Ringo/RingoScene9.unity
+    guid: eebfae4b790011c4d9302c88828eaca6
+  - enabled: 1
+    path: Assets/Scenes/Stories/Ringo/RingoScene10.unity
+    guid: beea898e37e609d4c8f9f605183be607
+  - enabled: 1
+    path: Assets/Scenes/Stories/Ringo/RingoScene11.unity
+    guid: c0a496a5a9ae83a4ca911e6c25207b79
+  - enabled: 1
+    path: Assets/Scenes/Stories/Ringo/RingoScene12.unity
+    guid: dd3867950a80fe04190ffb26de7064af
+  - enabled: 1
+    path: Assets/Scenes/Stories/Ringo/RingoScene13.unity
+    guid: 14f4f18f89531634fa6800afbd080f02
+  - enabled: 1
+    path: Assets/Scenes/Stories/Ringo/RingoScene14.unity
+    guid: 1a50a1091c413804c9fd6c2ce28dfc81
+  - enabled: 1
+    path: Assets/Scenes/Stories/Ringo/RingoScene15.unity
+    guid: 1b7c234003cf97e4fb6ac3976eb2b941
+  - enabled: 1
+    path: Assets/Scenes/Menu_games.unity
+    guid: be029aeb342ffb543a2ab872e5789017
+  - enabled: 1
+    path: Assets/Scenes/Mini-games/Leaves.unity
+    guid: ef9b71d1724a2a7489b83b5562231e1f
   m_configObjects:
     com.unity.input.settings: {fileID: 11400000, guid: 244d9dfec5766ff44b640c601b906377, type: 2}
