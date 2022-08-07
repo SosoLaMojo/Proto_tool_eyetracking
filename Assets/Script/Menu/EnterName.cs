@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
+using System.IO;
 
 public class EnterName : MonoBehaviour
 {
@@ -24,7 +25,6 @@ public class EnterName : MonoBehaviour
     public void SetName()
     {
         user_Name.text = user_Inputfield.text;
-        Debug.Log(user_Name);
-        
+        GameManager.instance.user_Name = user_Inputfield.text;
     }
 }

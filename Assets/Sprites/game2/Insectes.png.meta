@@ -1,0 +1,810 @@
+fileFormatVersion: 2
+guid: 61efafe5038b26141a08eae345f62d5f
+TextureImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 11
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMasterTextureLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Server
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Insectes_0
+      rect:
+        serializedVersion: 2
+        x: 89
+        y: 3157
+        width: 1297
+        height: 710
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b944ec9c9ac4c304ead14a77d1a47ddc
+      internalID: 976793741
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Insectes_1
+      rect:
+        serializedVersion: 2
+        x: 1395
+        y: 3157
+        width: 662
+        height: 708
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b6f316c5bd16ccc42a941d2f4dbaba43
+      internalID: -998801766
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Insectes_2
+      rect:
+        serializedVersion: 2
+        x: 2063
+        y: 3157
+        width: 938
+        height: 709
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6f443fba53ac5484c90bbdf3569a78c4
+      internalID: -886405294
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Insectes_3
+      rect:
+        serializedVersion: 2
+        x: 3007
+        y: 3157
+        width: 1094
+        height: 710
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a4a2187db4926144b8ceaadf5131d9f9
+      internalID: 903022067
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Insectes_4
+      rect:
+        serializedVersion: 2
+        x: 4107
+        y: 3157
+        width: 748
+        height: 710
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2dc8e8ee94bfd9144b03afd8c03eb24e
+      internalID: 94424219
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Insectes_5
+      rect:
+        serializedVersion: 2
+        x: 4860
+        y: 3157
+        width: 695
+        height: 710
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e4de726be249db74594496102e507fd9
+      internalID: -570782229
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Insectes_6
+      rect:
+        serializedVersion: 2
+        x: 81
+        y: 2388
+        width: 1344
+        height: 708
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0c74244b397fb144b833f0c5270d4eca
+      internalID: 232776062
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Insectes_7
+      rect:
+        serializedVersion: 2
+        x: 1469
+        y: 2388
+        width: 927
+        height: 705
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 36fe079a2f0963441ae8690e1f4952f4
+      internalID: -1859444383
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Insectes_8
+      rect:
+        serializedVersion: 2
+        x: 2440
+        y: 2388
+        width: 915
+        height: 705
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d1f225358f8fe174792ebde786366cff
+      internalID: 955145530
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Insectes_9
+      rect:
+        serializedVersion: 2
+        x: 3398
+        y: 2388
+        width: 753
+        height: 708
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8130df7e24f60164fa54e9421591b3a0
+      internalID: -251700952
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Insectes_10
+      rect:
+        serializedVersion: 2
+        x: 4193
+        y: 2388
+        width: 626
+        height: 705
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9aea60dff57acaf468a7b2fd94f978fc
+      internalID: -1662048451
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Insectes_11
+      rect:
+        serializedVersion: 2
+        x: 4863
+        y: 2388
+        width: 692
+        height: 705
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0648b10951cace944807fc533286db12
+      internalID: -1073954734
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Insectes_13
+      rect:
+        serializedVersion: 2
+        x: 932
+        y: 1616
+        width: 950
+        height: 709
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2ba6296780d37224187d7863d4df51c3
+      internalID: -1592013806
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Insectes_14
+      rect:
+        serializedVersion: 2
+        x: 1915
+        y: 1616
+        width: 692
+        height: 709
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8207082a00c9f734ea4e049d58ca0586
+      internalID: -2022698613
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Insectes_15
+      rect:
+        serializedVersion: 2
+        x: 2641
+        y: 1616
+        width: 782
+        height: 709
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9103e489b2a42424db548bbcca4b83db
+      internalID: 977319299
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Insectes_16
+      rect:
+        serializedVersion: 2
+        x: 3456
+        y: 1616
+        width: 730
+        height: 709
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0ef506c9b654a174091b582cf96ece14
+      internalID: -1471474420
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Insectes_17
+      rect:
+        serializedVersion: 2
+        x: 4220
+        y: 1616
+        width: 607
+        height: 709
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 60799cb7c70356d4e9b21ff0a3792698
+      internalID: -1386326466
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Insectes_18
+      rect:
+        serializedVersion: 2
+        x: 4860
+        y: 1616
+        width: 695
+        height: 709
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d73e8056e2737654d92948940029b0bf
+      internalID: -1617995106
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Insectes_19
+      rect:
+        serializedVersion: 2
+        x: 84
+        y: 1616
+        width: 815
+        height: 713
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f97050cde72d5a34ebd35d2301812c77
+      internalID: -2110055333
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Insectes_20
+      rect:
+        serializedVersion: 2
+        x: 81
+        y: 844
+        width: 1190
+        height: 709
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4bee3e6f27e59864f814fe872f36b832
+      internalID: 1100406511
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Insectes_21
+      rect:
+        serializedVersion: 2
+        x: 1325
+        y: 844
+        width: 809
+        height: 709
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e17ef3799ea09d345a293ae17ff8cc3d
+      internalID: 2144596793
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Insectes_22
+      rect:
+        serializedVersion: 2
+        x: 2155
+        y: 844
+        width: 964
+        height: 724
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2a4c42f467a8ffd49a7709ae7ffd271a
+      internalID: 1593965958
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Insectes_24
+      rect:
+        serializedVersion: 2
+        x: 3177
+        y: 844
+        width: 618
+        height: 709
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: faef10f68e60b574781b04b4c38c5635
+      internalID: -794503340
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Insectes_25
+      rect:
+        serializedVersion: 2
+        x: 3853
+        y: 844
+        width: 950
+        height: 709
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9a064fa15a681a14f87021e1ab39b148
+      internalID: -376873911
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Insectes_30
+      rect:
+        serializedVersion: 2
+        x: 4840
+        y: 844
+        width: 728
+        height: 742
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b523274a883e2c3458b02fdcfbb4ab5e
+      internalID: -454736535
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Insectes_31
+      rect:
+        serializedVersion: 2
+        x: 81
+        y: 73
+        width: 752
+        height: 708
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8868f160c33865440a667851d77c50c2
+      internalID: -326551703
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Insectes_32
+      rect:
+        serializedVersion: 2
+        x: 845
+        y: 73
+        width: 916
+        height: 708
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6d10254e940bfaf40aa62d673e233558
+      internalID: 842759532
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Insectes_33
+      rect:
+        serializedVersion: 2
+        x: 1773
+        y: 73
+        width: 747
+        height: 708
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 092d56e0e8a5d074286ed801189a229b
+      internalID: 1522380149
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Insectes_34
+      rect:
+        serializedVersion: 2
+        x: 2533
+        y: 73
+        width: 1331
+        height: 708
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: db87cc0d628e6fc429698bbb9aecbd14
+      internalID: 740346244
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Insectes_35
+      rect:
+        serializedVersion: 2
+        x: 3875
+        y: 73
+        width: 752
+        height: 708
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1b541ef217ffae44f9ea25ede2e5c27e
+      internalID: 2144303753
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Insectes_36
+      rect:
+        serializedVersion: 2
+        x: 4639
+        y: 73
+        width: 916
+        height: 708
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3d056345e04b22340a4d9276b020d168
+      internalID: -1251360118
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      Insectes_18: -1617995106
+      Insectes_6: 232776062
+      Insectes_28: 1746869945
+      Insectes_7: -1859444383
+      Insectes_19: -2110055333
+      Insectes_15: 977319299
+      Insectes_32: 842759532
+      Insectes_22: 1593965958
+      Insectes_33: 1522380149
+      Insectes_3: 903022067
+      Insectes_5: -570782229
+      Insectes_35: 2144303753
+      Insectes_0: 976793741
+      Insectes_25: -376873911
+      Insectes_12: 425258272
+      Insectes_27: 430373349
+      Insectes_13: -1592013806
+      Insectes_14: -2022698613
+      Insectes_1: -998801766
+      Insectes_34: 740346244
+      Insectes_9: -251700952
+      Insectes_29: -489928558
+      Insectes_31: -326551703
+      Insectes_30: -454736535
+      Insectes_10: -1662048451
+      Insectes_16: -1471474420
+      Insectes_21: 2144596793
+      Insectes_24: -794503340
+      Insectes_26: -37149025
+      Insectes_20: 1100406511
+      Insectes_17: -1386326466
+      Insectes_36: -1251360118
+      Insectes_4: 94424219
+      Insectes_8: 955145530
+      Insectes_2: -886405294
+      Insectes_11: -1073954734
+      Insectes_23: 1897551988
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

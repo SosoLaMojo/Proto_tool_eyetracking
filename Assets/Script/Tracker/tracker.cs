@@ -9,25 +9,27 @@ using System.IO;
 public class tracker : MonoBehaviour
 {
     [Serializable]
-    struct TimePos
+    public struct TimePos
     {
         public Vector2 Positions;
         public float time;
     }
-    
-    [SerializeField] List<TimePos> timePos;
-    [SerializeField] GameObject point;
-
-    List<Vector2> positionList = new List<Vector2>();
-    public float timer;
 
     [Serializable]
     struct SaveData
     {
         public List<TimePos> timePos;
     }
+    
+    public List<TimePos> timePos;
+    //[SerializeField] GameObject point;
+    //[SerializeField] LineRenderer line;
 
-    bool pointDisplay = true;
+    public List<Vector2> positionList = new List<Vector2>();
+    public float timer;
+    bool isRecording = false;
+    //private bool isRunning = false;
+    //bool pointDisplay = true;
 
 
     void Start()
@@ -37,8 +39,8 @@ public class tracker : MonoBehaviour
 
     void Update()
     {
-        pointDisplay = false;
-        
+        //pointDisplay = false;
+        if (!isRecording) return;
         positionList.Add(InputPosition());
         timer += Time.deltaTime;
         if (timer >= 0.2)
@@ -57,10 +59,10 @@ public class tracker : MonoBehaviour
             newTimePos.Positions = sum;
             timePos.Add(newTimePos);
         
-            if (pointDisplay = false)
-            {
-                GameObject.Instantiate(point, newTimePos.Positions, Quaternion.identity, transform);
-            }
+            //if (pointDisplay = false)
+            //{
+            //    GameObject.Instantiate(point, newTimePos.Positions, Quaternion.identity, transform);
+            //}
             timer = 0;
             positionList.Clear();
         }
@@ -73,63 +75,79 @@ public class tracker : MonoBehaviour
         return Camera.main.ScreenToWorldPoint(gazePoint.Screen);
     }
 
+    public void Recording()
+    {
+        isRecording = true;
+    }
+
     // Fonction qui permet de créer un Json
-    public void CreateJsonGazePoint()
-    {
-        SaveData saveData = new SaveData();
-        saveData.timePos = timePos;
-        string json = JsonUtility.ToJson(saveData, true);
-        //StreamWriter writer = new StreamWriter("GazePoint.txt", false);
-        //writer.Write(json);
-        WriteToFile(json);
-        Debug.Log(json);
-    }
+    //public void CreateJsonGazePoint()
+    //{
+    //    SaveData saveData = new SaveData();
+    //    saveData.timePos = timePos;
+    //    string json = JsonUtility.ToJson(saveData, true);
+    //    WriteToFile(json);
+    //    Debug.Log(json);
+    //}
 
-    // Fonction qui permet d'écrire le Json
-    private void WriteToFile(string json)
-    {
-        FileStream fileStream = new FileStream("GazePoint.txt", FileMode.Create);
-
-        using (StreamWriter writer = new StreamWriter(fileStream))
-        {
-            writer.Write(json);
-        }
-    }
+    // Fonction qui permet d'écrire dans le Json
+    //private void WriteToFile(string json)
+    //{
+    //    //FileStream fileStream = new FileStream($"{ GameManager.instance.user_Name }.txt", FileMode.Create);
+    //    FileStream fileStream = new FileStream($"{ GameManager.instance.user_Name }.txt", FileMode.Open);
+    //    using (StreamWriter writer = new StreamWriter(fileStream))
+    //    {
+    //        writer.Write(json);
+    //    }
+    //}
 
     // Fonction qui permet de lire le Json
-    private SaveData ReadJsonGazePoint()
-    {
-        // Lecture du json
-        string json;
-        StreamReader reader = new StreamReader("GazePoint.txt", true);
-        json = reader.ReadToEnd();
-        Debug.Log(json);
-        // Traduit le string en structure SaveData
-        SaveData saveData = new SaveData();
-        saveData = JsonUtility.FromJson<SaveData>(json);
+    //private SaveData ReadJsonGazePoint()
+    //{
+    //    // Lecture du json
+    //    string json;
+    //    StreamReader reader = new StreamReader($"{ GameManager.instance.user_Name }.txt", true);
+    //    json = reader.ReadToEnd();
+    //    Debug.Log(json);
+    //    // Traduit le string en structure SaveData
+    //    SaveData saveData = new SaveData();
+    //    saveData = JsonUtility.FromJson<SaveData>(json);
 
-        return saveData;
-    }
+    //    return saveData;
+    //}
 
     // Fonction qui permet d'afficher le gazepoint du Json
-    public void DrawJsonGazePoint()
-    {
-        // supprime les gazepoint préexistants
-        int childs = transform.childCount;
-        for (int i = 0; i < childs; i++)
-        {
-            GameObject.Destroy(transform.GetChild(i).gameObject);
-        }
+    //public void DrawJsonGazePoint()
+    //{
+    //    // supprime les gazepoint préexistants
+    //    int childs = transform.childCount;
+    //    for (int i = 0; i < childs; i++)
+    //    {
+    //        GameObject.Destroy(transform.GetChild(i).gameObject);
+    //    }
 
-        // Lecture des positions
-        SaveData saveData;
-        saveData = ReadJsonGazePoint();
+    //    // Lecture des positions
+    //    SaveData saveData;
+    //    saveData = ReadJsonGazePoint();
 
-        // Instantiation du gazepoint contenu dans le Json
-        for (int i = 0; i < saveData.timePos.Count; i++)
-        {
-            Vector2 positionGazePoint = saveData.timePos[i].Positions;
-            GameObject.Instantiate(point, positionGazePoint, Quaternion.identity, transform);
-        }
-    }
+    //    // Instantiation du gazepoint contenu dans le Json
+    //    if (isRunning == false)
+    //    {
+    //        StartCoroutine(Wrapper(saveData));
+    //    }
+    //}
+
+    //IEnumerator Wrapper(SaveData saveData)
+    //{
+    //    isRunning = true;
+    //    for (int i = 0; i < saveData.timePos.Count; i++)
+    //    {
+    //        Vector2 positionGazePoint = saveData.timePos[i].Positions;
+    //        GameObject.Instantiate(point, positionGazePoint, Quaternion.identity, transform);
+    //        line.positionCount = i + 1;
+    //        line.SetPosition(i, positionGazePoint);
+    //        yield return new WaitForSeconds(saveData.timePos[i].time);
+    //    }
+    //    isRunning = false;
+    //}
 }

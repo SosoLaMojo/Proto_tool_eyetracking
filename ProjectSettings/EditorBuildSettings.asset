@@ -6,10 +6,10 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Scenes/Tracker_test.unity
+    path: Assets/Scenes/Test/Tracker_test.unity
     guid: 2cda990e2423bbf4892e6590ba056729
   - enabled: 1
-    path: Assets/Scenes/Menu.unity
+    path: Assets/Scenes/Menu/Menu.unity
     guid: 3c1d717913452e34ba57f57e89ce5f2b
   - enabled: 1
     path: Assets/Scenes/Stories/StoriesScene.unity
@@ -93,10 +93,19 @@ EditorBuildSettings:
     path: Assets/Scenes/Stories/Ringo/RingoScene15.unity
     guid: 1b7c234003cf97e4fb6ac3976eb2b941
   - enabled: 1
-    path: Assets/Scenes/Menu_games.unity
+    path: Assets/Scenes/Menu/Menu_games.unity
     guid: be029aeb342ffb543a2ab872e5789017
   - enabled: 1
     path: Assets/Scenes/Mini-games/Leaves.unity
     guid: ef9b71d1724a2a7489b83b5562231e1f
+  - enabled: 1
+    path: Assets/Scenes/Data_Analyse/Menu/Choice_student.unity
+    guid: a817856ffa38eaa488e577a7a68a1ea4
+  - enabled: 1
+    path: Assets/Scenes/Data_Analyse/Menu/Menu_games_Analyze.unity
+    guid: 66f3ce3c913440d40a571c7c78843773
+  - enabled: 1
+    path: Assets/Scenes/Data_Analyse/Mini-games/Leaves_Analyse.unity
+    guid: c67f0a05414232a4daad3a553fd82a5f
   m_configObjects:
     com.unity.input.settings: {fileID: 11400000, guid: 244d9dfec5766ff44b640c601b906377, type: 2}

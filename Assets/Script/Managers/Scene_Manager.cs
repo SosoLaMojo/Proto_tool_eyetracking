@@ -2,13 +2,15 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using DentedPixel;
 
 public class Scene_Manager : MonoBehaviour
 {
     // Game 1
     [SerializeField] private GameObject panelMenuStartGame1;
-    //[SerializeField] private AudioClip setPoint;
     private AudioSource audioSource;
+    public GameObject bar;
+    public float time;
 
     // Start is called before the first frame update
     void Start()
@@ -30,6 +32,10 @@ public class Scene_Manager : MonoBehaviour
             panelMenuStartGame1.gameObject.SetActive(true);
             Time.timeScale = 0;
         }
+    }
+    public void AnimateBar()
+    {
+        LeanTween.scaleX(bar, 1, time);
     }
 
     public void Quit()
