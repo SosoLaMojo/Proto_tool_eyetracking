@@ -9,7 +9,18 @@ public class Save_stories1_tracker : MonoBehaviour
 
     private void Start()
     {
-        GameManager.instance.currentPage = page;
+        Time.timeScale = 1;
+        // condition, si on est en mode jeu on lance le recording du tracker
+        if (_tracker != null)
+        {
+            _tracker.Recording();
+        }
+        // si on est en mode analyse, je lis le Json et dessine le Gazepoint en fonction de la currentpage
+        else
+        {
+            MiniGameAnalyze();
+            GameManager.instance.DrawJsonGazePoint(page);
+        }
     }
     public void SaveMiniGame()
     {
@@ -30,10 +41,10 @@ public class Save_stories1_tracker : MonoBehaviour
 
             });
         }
-        // enregistre la liste eyesEvent dans gameLeaves qui correspond aux donées de la boucle
+        // enregistre la liste eyesEvent dans gameReading qui correspond aux donées de la boucle
         GameReading gameReading = new GameReading();
         gameReading.events = eyesEvent;
-        // ne pas oublier de changer la variable pour le deuxième livre : gameReading2
+        // rajout d'une page dans les saveData dans la classe GameReading
         saveData.gameReading1.Add(gameReading);
         // écrit dans le json les positions et les temps de la liste eyesEvent
         GameManager.instance.WriteToFile(saveData);

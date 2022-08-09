@@ -64,13 +64,11 @@ public class GameManager : MonoBehaviour
     private string sceneName1 = "Leaves_Analyse";
     private string sceneName2 = "Search_and_Find_Analyze";
 
-    // TODO écrire toute les variables de chaque scène de lecture des livres
-    private string book1Scenes = "Ringo";
-    private string book2Scenes = "Lion";
-    // etc...
+    // variables pour différencier les scènes de chaque livre
+    private string book1Scenes = "Lion";
+    private string book2Scenes = "Ringo";
 
     public bool isLevelTwoUnlocked = false;
-    public int currentPage = 0;
    
 
     private void Awake()
@@ -88,7 +86,7 @@ public class GameManager : MonoBehaviour
         }
     }
 
-    // Fonction qui permet de créer un Json
+    // Fonction qui permet d'écrire les saveData dans le Json
     public void CreateJsonGazePoint()
     {
         SaveData saveData = new SaveData();
@@ -102,6 +100,7 @@ public class GameManager : MonoBehaviour
         FileStream fileStream = new FileStream($"{ GameManager.instance.user_Name }.txt", FileMode.Create);
     }
 
+    // fonction qui permet d'écrire dans le Json
     public void WriteToFile(SaveData newSaveData)
     {
         saveData = newSaveData;
@@ -130,7 +129,7 @@ public class GameManager : MonoBehaviour
     }
 
     // Fonction qui permet d'afficher le gazepoint du Json
-    public void DrawJsonGazePoint()
+    public void DrawJsonGazePoint(int currentPage = 0)
     {
         // supprime les gazepoint préexistants
         int childs = transform.childCount;
@@ -139,29 +138,33 @@ public class GameManager : MonoBehaviour
         SaveData saveData;
         saveData = ReadJsonGazePoint();
 
-        // Instantiation du gazepoint contenu dans le Json
+        // Lance la coroutine afin d'instancier les gazepoints
         if (isRunning == false)
         {
+            // Lance la coroutine avec les données du premier jeux
             if(sceneName1 == SceneManager.GetActiveScene().name)
             {
                 StartCoroutine(Wrapper(saveData.gameLeaves.events));
             }
+            //... avec le deuxième jeu
             else if (sceneName2 == SceneManager.GetActiveScene().name)
             {
                 StartCoroutine(Wrapper(saveData.gameSearchAndFind.events));
             }
+            //... avec le premier livre
             else if (SceneManager.GetActiveScene().name.Contains(book1Scenes))
             {
                 StartCoroutine(Wrapper(saveData.gameReading1[currentPage].events));
             }
+            // ...avec le deuxième livre
             else if (SceneManager.GetActiveScene().name.Contains(book2Scenes))
             {
-                StartCoroutine(Wrapper(saveData.gameReading1[currentPage].events));
+                StartCoroutine(Wrapper(saveData.gameReading2[currentPage].events));
             }
         }
     }
 
-    // Coroutine qui lit une liste de la classe GameEvents et les affichent
+    // Coroutine qui lit une liste de la classe GameEvents, instancie les point à leur position et utilise un LineRender pour les relier entre eux
     IEnumerator Wrapper(List<GameEvent> events)
     {
         float timeOffset = events[0].time;
@@ -177,6 +180,19 @@ public class GameManager : MonoBehaviour
                 yield return new WaitForSeconds(events[i].time - timeOffset);
                 timeOffset = events[i].time;
             }
+        }
+        isRunning = false;
+    }
+
+    // Fonction qui permet de destroy le graph de la scene précédente et d'arrêter l'affichage actuel du gazepoint en stoppant la coroutine
+    public void Clear()
+    {
+        StopAllCoroutines();
+        SpriteRenderer[] point = transform.GetComponentsInChildren<SpriteRenderer>();
+        line.positionCount = 0;
+        for (int i = 0; i < point.Length; i++)
+        {
+            GameObject.Destroy(point[i].gameObject);
         }
         isRunning = false;
     }

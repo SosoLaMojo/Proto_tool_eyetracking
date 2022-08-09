@@ -27,20 +27,17 @@ public class tracker : MonoBehaviour
     public float timer;
     bool isRecording = false;
 
-
-    void Start()
-    {
-        Debug.Log(InputSystem.devices);
-    }
-
     void Update()
     {
+        // l'update ne se lance que si le tracker enregistre des data
         if (!isRecording) return;
+        // Si la condition précédente n'est pas rempli, la position est ajoutée dans la positionList
         positionList.Add(InputPosition());
         timer += Time.deltaTime;
+        // Si le timer est plus grand ou égal à 0.2secondes, enregistre la moyenne
         if (timer >= 0.2)
         {
-            // enregistre les position toutes les secondes
+            //enregistre les position toutes les secondes
             TimePos newTimePos = new TimePos();
             newTimePos.Positions = InputPosition();
             newTimePos.time = Time.time;
@@ -52,8 +49,10 @@ public class tracker : MonoBehaviour
             }
             sum /= positionList.Count;
             newTimePos.Positions = sum;
+            // ajout de la liste de point dans le timePos
             timePos.Add(newTimePos);
             timer = 0;
+            // effacement de la positionList pour recommencer une nouvelle moyenne pour le point suivant 
             positionList.Clear();
         }
     }

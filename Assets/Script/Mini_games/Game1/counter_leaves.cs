@@ -28,12 +28,17 @@ public class counter_leaves : MonoBehaviour
     {
         // Condition qui permet de compter les nombre de feuilles qui ont été trouvées,
         // ainsi que de savoir laquelle en passant par un tag
+
+        // Si le bouton le bouton de la souris est cliqué
         if (Input.GetMouseButtonDown(0))
         {
+            // création d'un raycast à la position de la souris
             Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
             RaycastHit hit;
+            // Si le raycast a toucher un objet...
             if (Physics.Raycast(ray, out hit))
             {
+                // .. et si l'objet a pour tag "Feuille, il détruit le gameObject feuille contenu dans la scène, ajoute 1 au compteur et active la feuille dans l'UI
                 if (hit.transform.gameObject.tag == "Feuille")
                 {
                     Destroy(hit.transform.gameObject);
@@ -77,7 +82,7 @@ public class counter_leaves : MonoBehaviour
 
             });
         }
-        // enregistre la liste eyesEvent dans gameLeaves qui correspond aux donées de la boucle
+        // enregistre la liste eyesEvent dans gameLeaves qui correspond aux données de la boucle
         saveData.gameLeaves.events = eyesEvent;
         // écrit dans le json les positions et les temps de la liste eyesEvent
         GameManager.instance.WriteToFile(saveData);

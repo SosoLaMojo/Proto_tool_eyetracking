@@ -17,7 +17,7 @@ public class Search_and_Find : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        // condition qui permet de choisir un objet en random dans la scène en jeu
+        // condition qui permet de choisir un objet en random dans la scène en jeu en passant par une liste d'objets
         if(sceneName == SceneManager.GetActiveScene().name)
         {
             randomItemIndex = Random.Range(0, _objects.Count - 1);
@@ -38,12 +38,18 @@ public class Search_and_Find : MonoBehaviour
     void Update()
     {
         // condition qui permet de determiner si l'objet random à été cliquer avec la souris
+
+        // Si le bouton le bouton de la souris est cliqué
         if (Input.GetMouseButtonDown(0))
         {
+            // création d'un raycast à la position de la souris
             Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
             RaycastHit2D hit = Physics2D.Raycast(ray.origin, ray.direction);
+
+            // Si le raycast a toucher un objet...
             if (hit.collider != null)
             {
+                // ... et si l'objet touché est celui du randomItem le panel de Win s'affiche
                 if(hit.transform.gameObject == randomItem)
                 {
                     _panelMenuStartGame1panelWin.gameObject.SetActive(true);

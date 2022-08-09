@@ -9,7 +9,16 @@ public class Save_stories2_tracker : MonoBehaviour
 
     private void Start()
     {
-        GameManager.instance.currentPage = page;
+        Time.timeScale = 1;
+        if (_tracker != null)
+        {
+            _tracker.Recording();
+        }
+        else
+        {
+            MiniGameAnalyze();
+            GameManager.instance.DrawJsonGazePoint(page);
+        }
     }
     public void SaveMiniGame()
     {
