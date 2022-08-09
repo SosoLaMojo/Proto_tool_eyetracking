@@ -107,5 +107,11 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Data_Analyse/Mini-games/Leaves_Analyse.unity
     guid: c67f0a05414232a4daad3a553fd82a5f
+  - enabled: 1
+    path: Assets/Scenes/Mini-games/Cherche_et_trouve.unity
+    guid: e50258756e1d1854f8b0d1316e370a6f
+  - enabled: 1
+    path: Assets/Scenes/Data_Analyse/Mini-games/Search_and_Find_Analyze.unity
+    guid: 37e9cdcc5f9ce344f9f23c803f002da8
   m_configObjects:
     com.unity.input.settings: {fileID: 11400000, guid: 244d9dfec5766ff44b640c601b906377, type: 2}

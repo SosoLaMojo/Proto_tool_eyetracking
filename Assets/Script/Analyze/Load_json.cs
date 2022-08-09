@@ -5,23 +5,13 @@ using System.IO;
 
 public class Load_json : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
-
+    // Fonction qui charge le Json
     public void LoadFileName()
     {
         GameManager.instance.ReadJsonGazePoint();
     }
 
+    // Fonction qui dessine les gazepoint
     public void DrawGazePoint()
     {
         GameManager.instance.DrawJsonGazePoint();

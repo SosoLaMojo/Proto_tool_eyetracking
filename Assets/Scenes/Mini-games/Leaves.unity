@@ -1131,6 +1131,7 @@ MonoBehaviour:
   - {fileID: 1704495783}
   _panelMenuStartGame1panelWin: {fileID: 1144514243}
   _tracker: {fileID: 1473680527}
+  _sceneManager: {fileID: 1956870860}
 --- !u!4 &428192934
 Transform:
   m_ObjectHideFlags: 0
@@ -4468,10 +4469,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7296010465578520254, guid: e060de9a4e78edd408b53083cec70ea7, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7296010465578520255, guid: e060de9a4e78edd408b53083cec70ea7, type: 3}
-      propertyPath: m_Enabled
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []

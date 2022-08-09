@@ -22,14 +22,10 @@ public class tracker : MonoBehaviour
     }
     
     public List<TimePos> timePos;
-    //[SerializeField] GameObject point;
-    //[SerializeField] LineRenderer line;
 
     public List<Vector2> positionList = new List<Vector2>();
     public float timer;
     bool isRecording = false;
-    //private bool isRunning = false;
-    //bool pointDisplay = true;
 
 
     void Start()
@@ -39,7 +35,6 @@ public class tracker : MonoBehaviour
 
     void Update()
     {
-        //pointDisplay = false;
         if (!isRecording) return;
         positionList.Add(InputPosition());
         timer += Time.deltaTime;
@@ -49,7 +44,7 @@ public class tracker : MonoBehaviour
             TimePos newTimePos = new TimePos();
             newTimePos.Positions = InputPosition();
             newTimePos.time = Time.time;
-            // fait la moyenne
+            // fait la moyenne pour ne pas afficher trop de positions et de temps
             Vector2 sum = Vector2.zero;
             for (int i = 0; i < positionList.Count; i++)
             {
@@ -58,11 +53,6 @@ public class tracker : MonoBehaviour
             sum /= positionList.Count;
             newTimePos.Positions = sum;
             timePos.Add(newTimePos);
-        
-            //if (pointDisplay = false)
-            //{
-            //    GameObject.Instantiate(point, newTimePos.Positions, Quaternion.identity, transform);
-            //}
             timer = 0;
             positionList.Clear();
         }
@@ -75,79 +65,10 @@ public class tracker : MonoBehaviour
         return Camera.main.ScreenToWorldPoint(gazePoint.Screen);
     }
 
+    // bool qui permet de lancer l'enregistrement des données de l'eyetracker
+    // (appelée dans un bouton de la scène)
     public void Recording()
     {
         isRecording = true;
     }
-
-    // Fonction qui permet de créer un Json
-    //public void CreateJsonGazePoint()
-    //{
-    //    SaveData saveData = new SaveData();
-    //    saveData.timePos = timePos;
-    //    string json = JsonUtility.ToJson(saveData, true);
-    //    WriteToFile(json);
-    //    Debug.Log(json);
-    //}
-
-    // Fonction qui permet d'écrire dans le Json
-    //private void WriteToFile(string json)
-    //{
-    //    //FileStream fileStream = new FileStream($"{ GameManager.instance.user_Name }.txt", FileMode.Create);
-    //    FileStream fileStream = new FileStream($"{ GameManager.instance.user_Name }.txt", FileMode.Open);
-    //    using (StreamWriter writer = new StreamWriter(fileStream))
-    //    {
-    //        writer.Write(json);
-    //    }
-    //}
-
-    // Fonction qui permet de lire le Json
-    //private SaveData ReadJsonGazePoint()
-    //{
-    //    // Lecture du json
-    //    string json;
-    //    StreamReader reader = new StreamReader($"{ GameManager.instance.user_Name }.txt", true);
-    //    json = reader.ReadToEnd();
-    //    Debug.Log(json);
-    //    // Traduit le string en structure SaveData
-    //    SaveData saveData = new SaveData();
-    //    saveData = JsonUtility.FromJson<SaveData>(json);
-
-    //    return saveData;
-    //}
-
-    // Fonction qui permet d'afficher le gazepoint du Json
-    //public void DrawJsonGazePoint()
-    //{
-    //    // supprime les gazepoint préexistants
-    //    int childs = transform.childCount;
-    //    for (int i = 0; i < childs; i++)
-    //    {
-    //        GameObject.Destroy(transform.GetChild(i).gameObject);
-    //    }
-
-    //    // Lecture des positions
-    //    SaveData saveData;
-    //    saveData = ReadJsonGazePoint();
-
-    //    // Instantiation du gazepoint contenu dans le Json
-    //    if (isRunning == false)
-    //    {
-    //        StartCoroutine(Wrapper(saveData));
-    //    }
-    //}
-
-    //IEnumerator Wrapper(SaveData saveData)
-    //{
-    //    isRunning = true;
-    //    for (int i = 0; i < saveData.timePos.Count; i++)
-    //    {
-    //        Vector2 positionGazePoint = saveData.timePos[i].Positions;
-    //        GameObject.Instantiate(point, positionGazePoint, Quaternion.identity, transform);
-    //        line.positionCount = i + 1;
-    //        line.SetPosition(i, positionGazePoint);
-    //        yield return new WaitForSeconds(saveData.timePos[i].time);
-    //    }
-    //    isRunning = false;
-    //}
 }

@@ -4,18 +4,13 @@ using UnityEngine;
 
 public class Light_follow_mouse : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
-
     // Update is called once per frame
     void Update()
     {
         FollowMousePosition();
     }
 
+    // Fonction qui permet au mask de suivre la position de la souris
     private void FollowMousePosition()
     {
         var mousePos = Input.mousePosition;

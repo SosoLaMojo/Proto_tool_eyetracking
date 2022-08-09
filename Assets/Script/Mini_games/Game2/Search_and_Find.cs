@@ -1,57 +1,54 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
-public class counter_leaves : MonoBehaviour
+public class Search_and_Find : MonoBehaviour
 {
-    [SerializeField] List<GameObject> _leaves;
+    [SerializeField] List<GameObject> _objects;
+    GameObject randomItem;
+    [SerializeField] Image panelImage;
     [SerializeField] private GameObject _panelMenuStartGame1panelWin;
     [SerializeField] private tracker _tracker;
-    int counter = 0;
-    [SerializeField] Scene_Manager _sceneManager;
+    private int randomItemIndex;
+    private string sceneName = "Cherche_et_trouve";
 
     // Start is called before the first frame update
     void Start()
     {
-        // permet de stocker les feuilles qui devront s'afficher dans l'UI
-        // quand le joueur aura cliqué dessus dans le jeu en les cachant au
-        // démarage de la scène
-        foreach (var item in _leaves)
+        // condition qui permet de choisir un objet en random dans la scène en jeu
+        if(sceneName == SceneManager.GetActiveScene().name)
         {
-            item.SetActive(false);
+            randomItemIndex = Random.Range(0, _objects.Count - 1);
+            randomItem = _objects[randomItemIndex];
+            panelImage.sprite = randomItem.GetComponent<SpriteRenderer>().sprite;
         }
-
+        // permet de récupérer l'index de l'item random pour être affiché dans les analyses
+        else
+        {
+            randomItemIndex = GameManager.instance.ReadJsonGazePoint().gameSearchAndFind.randomItem;
+            randomItem = _objects[randomItemIndex];
+            panelImage.sprite = randomItem.GetComponent<SpriteRenderer>().sprite;
+        }
+        
     }
 
     // Update is called once per frame
     void Update()
     {
-        // Condition qui permet de compter les nombre de feuilles qui ont été trouvées,
-        // ainsi que de savoir laquelle en passant par un tag
+        // condition qui permet de determiner si l'objet random à été cliquer avec la souris
         if (Input.GetMouseButtonDown(0))
         {
             Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
-            RaycastHit hit;
-            if (Physics.Raycast(ray, out hit))
+            RaycastHit2D hit = Physics2D.Raycast(ray.origin, ray.direction);
+            if (hit.collider != null)
             {
-                if (hit.transform.gameObject.tag == "Feuille")
+                if(hit.transform.gameObject == randomItem)
                 {
-                    Destroy(hit.transform.gameObject);
-                    _leaves[counter++].SetActive(true);
+                    _panelMenuStartGame1panelWin.gameObject.SetActive(true);
+                    Time.timeScale = 0;
                 }
-            }
-        }
-
-        // Quand le compteur feuilles atteint 9, le panel de Win s'affiche
-        if(counter == 9)
-        {
-            _panelMenuStartGame1panelWin.gameObject.SetActive(true);
-            Time.timeScale = 0;
-
-            // change le bool a true si le mini-jeu 1 est fini dans le temps impartit
-            if (_sceneManager.isTimeGood())
-            {
-                GameManager.instance.isLevelTwoUnlocked = true;
             }
         }
     }
@@ -64,7 +61,7 @@ public class counter_leaves : MonoBehaviour
         SaveData saveData = GameManager.instance.saveData;
         // récupère les timePos du tracker.cs
         var timePos = _tracker.timePos;
-        // Creation une liste d'event
+        // Creation d'une liste d'event
         List<GameEvent> eyesEvent = new List<GameEvent>();
         // boucle qui permet de remplir la liste eyesEvent des positions et des temps de l'eyetracker
         for (int i = 0; i < timePos.Count; i++)
@@ -77,12 +74,14 @@ public class counter_leaves : MonoBehaviour
 
             });
         }
-        // enregistre la liste eyesEvent dans gameLeaves qui correspond aux donées de la boucle
-        saveData.gameLeaves.events = eyesEvent;
+        // enregistre la liste eyesEvent dans gameSearchAndFind qui correspond aux données de la boucle
+        saveData.gameSearchAndFind.events = eyesEvent;
+        // enregistre l'item random qui à été choisit
+        saveData.gameSearchAndFind.randomItem = randomItemIndex;
         // écrit dans le json les positions et les temps de la liste eyesEvent
         GameManager.instance.WriteToFile(saveData);
     }
-    
+
     // Fonction qui permet de lire le Json dans la partie Analyse du jeu (appelé dans un bouton de la scène)
     public void MiniGameAnalyze()
     {

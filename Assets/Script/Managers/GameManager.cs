@@ -3,13 +3,17 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using System.IO;
+using UnityEngine.SceneManagement;
 
 [Serializable]
 public struct SaveData
 {
     public GameLeaves gameLeaves;
     public GameSearchAndFind gameSearchAndFind;
-    public GameReading gameReading;
+    //Ringo
+    public List <GameReading> gameReading1;
+    //Lion
+    public List<GameReading> gameReading2;
 }
 
 public enum EventType
@@ -36,6 +40,7 @@ public struct GameLeaves
 public struct GameSearchAndFind
 {
     public List<GameEvent> events;
+    public int randomItem;
 }
 
 [Serializable]
@@ -56,9 +61,21 @@ public class GameManager : MonoBehaviour
     [SerializeField] GameObject point;
     [SerializeField] LineRenderer line;
 
+    private string sceneName1 = "Leaves_Analyse";
+    private string sceneName2 = "Search_and_Find_Analyze";
+
+    // TODO écrire toute les variables de chaque scène de lecture des livres
+    private string book1Scenes = "Ringo";
+    // etc...
+
+    public bool isLevelTwoUnlocked = false;
+    public int currentPage = 0;
+   
+
     private void Awake()
     {
-        // Patern singleton pour s'assurer qu'il n'y a qu'un seul GameManager dans toutes les scènes
+        // Patern singleton pour s'assurer qu'il n'y a qu'un seul GameManager dans toutes les scènes,
+        // et qu'il ne soit pas effacer en passant d'une scène à l'autre
         if (instance == null)
         {
             instance = this;
@@ -69,36 +86,28 @@ public class GameManager : MonoBehaviour
             Destroy(gameObject);
         }
     }
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-
-    }
 
     // Fonction qui permet de créer un Json
     public void CreateJsonGazePoint()
     {
         SaveData saveData = new SaveData();
         string json = JsonUtility.ToJson(saveData, true);
-        WriteToFile(json);
-        //Debug.Log(json);
+        WriteToFile(saveData);
     }
 
-    // Fonction qui permet d'écrire le Json
+    // Fonction qui permet de créer le Json
     public void CreateJsonFile()
     {
         FileStream fileStream = new FileStream($"{ GameManager.instance.user_Name }.txt", FileMode.Create);
     }
 
-    public void WriteToFile(string json)
+    public void WriteToFile(SaveData newSaveData)
     {
-        FileStream fileStream = new FileStream($"{ GameManager.instance.user_Name }.txt", FileMode.Open);
+        saveData = newSaveData;
+        string json = JsonUtility.ToJson(saveData, true);
+        // Ouvre et clear le Json
+        FileStream fileStream = new FileStream($"{ GameManager.instance.user_Name }.txt", FileMode.Truncate);
+        // écrit dans le Json
         using (StreamWriter writer = new StreamWriter(fileStream))
         {
             writer.Write(json);
@@ -124,10 +133,6 @@ public class GameManager : MonoBehaviour
     {
         // supprime les gazepoint préexistants
         int childs = transform.childCount;
-        //for (int i = 0; i < childs; i++)
-        //{
-        //    GameObject.Destroy(transform.GetChild(i).gameObject);
-        //}
 
         // Lecture des positions
         SaveData saveData;
@@ -136,24 +141,36 @@ public class GameManager : MonoBehaviour
         // Instantiation du gazepoint contenu dans le Json
         if (isRunning == false)
         {
-            StartCoroutine(Wrapper(saveData));
+            if(sceneName1 == SceneManager.GetActiveScene().name)
+            {
+                StartCoroutine(Wrapper(saveData.gameLeaves.events));
+            }
+            else if (sceneName2 == SceneManager.GetActiveScene().name)
+            {
+                StartCoroutine(Wrapper(saveData.gameSearchAndFind.events));
+            }
+            else if (SceneManager.GetActiveScene().name.Contains(book1Scenes))
+            {
+                StartCoroutine(Wrapper(saveData.gameReading1[currentPage].events));
+            }
         }
     }
 
-    IEnumerator Wrapper(SaveData saveData)
+    // Coroutine qui lit une liste de la classe GameEvents et les affichent
+    IEnumerator Wrapper(List<GameEvent> events)
     {
-        float timeOffset = saveData.gameLeaves.events[0].time;
+        float timeOffset = events[0].time;
         isRunning = true;
-        for (int i = 0; i < saveData.gameLeaves.events.Count; i++)
+        for (int i = 0; i < events.Count; i++)
         {
-            if(saveData.gameLeaves.events[i].eventType == EventType.EYES)
+            if (events[i].eventType == EventType.EYES)
             {
-                Vector2 positionGazePoint = saveData.gameLeaves.events[i].position;
+                Vector2 positionGazePoint = events[i].position;
                 GameObject.Instantiate(point, positionGazePoint, Quaternion.identity, transform);
                 line.positionCount = i + 1;
                 line.SetPosition(i, positionGazePoint);
-                yield return new WaitForSeconds(saveData.gameLeaves.events[i].time - timeOffset);
-                timeOffset = saveData.gameLeaves.events[i].time;
+                yield return new WaitForSeconds(events[i].time - timeOffset);
+                timeOffset = events[i].time;
             }
         }
         isRunning = false;
