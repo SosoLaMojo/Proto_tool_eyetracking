@@ -6,47 +6,59 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Scenes/Test/Tracker_test.unity
-    guid: 2cda990e2423bbf4892e6590ba056729
-  - enabled: 1
     path: Assets/Scenes/Menu/Menu.unity
     guid: 3c1d717913452e34ba57f57e89ce5f2b
+  - enabled: 1
+    path: Assets/Scenes/Menu/Menu_games.unity
+    guid: be029aeb342ffb543a2ab872e5789017
+  - enabled: 1
+    path: Assets/Scenes/Mini-Games/Leaves.unity
+    guid: ef9b71d1724a2a7489b83b5562231e1f
+  - enabled: 1
+    path: Assets/Scenes/Mini-Games/Cherche_et_trouve.unity
+    guid: e50258756e1d1854f8b0d1316e370a6f
   - enabled: 1
     path: Assets/Scenes/Stories/StoriesScene.unity
     guid: 988d885f453130d49b355b50eebd84dc
   - enabled: 1
-    path: Assets/Scenes/Stories/Le lion et le lapin/Scene1.unity
+    path: Assets/Scenes/Stories/Le lion et le lapin/Lion_Scene0.unity
+    guid: f7a01d10921df2443b791b70cf3fb324
+  - enabled: 1
+    path: Assets/Scenes/Stories/Le lion et le lapin/Lion_Scene1.unity
     guid: 5cab05d7718ca4446b78d1d8829e9442
   - enabled: 1
-    path: Assets/Scenes/Stories/Le lion et le lapin/Scene2.unity
+    path: Assets/Scenes/Stories/Le lion et le lapin/Lion_Scene2.unity
     guid: 90d9bcdcf5749d740a2272001eb8b460
   - enabled: 1
-    path: Assets/Scenes/Stories/Le lion et le lapin/Scene3.unity
+    path: Assets/Scenes/Stories/Le lion et le lapin/Lion_Scene3.unity
     guid: ae799a096d9957f4993908751ba6c84d
   - enabled: 1
-    path: Assets/Scenes/Stories/Le lion et le lapin/Scene4.unity
+    path: Assets/Scenes/Stories/Le lion et le lapin/Lion_Scene4.unity
     guid: 4a370079be582104fbef4ac090ccae9e
   - enabled: 1
-    path: Assets/Scenes/Stories/Le lion et le lapin/Scene5.unity
+    path: Assets/Scenes/Stories/Le lion et le lapin/Lion_Scene5.unity
     guid: 61e1da9630c7cd248ac5ab90cefc85f6
   - enabled: 1
-    path: Assets/Scenes/Stories/Le lion et le lapin/Scene6.unity
+    path: Assets/Scenes/Stories/Le lion et le lapin/Lion_Scene6.unity
     guid: 4e2a3d847b430c141b88f467c4fd4d3d
   - enabled: 1
-    path: Assets/Scenes/Stories/Le lion et le lapin/Scene7.unity
+    path: Assets/Scenes/Stories/Le lion et le lapin/Lion_Scene7.unity
     guid: a359f81f77779264d90a95bab4354e50
   - enabled: 1
-    path: Assets/Scenes/Stories/Le lion et le lapin/Scene8.unity
+    path: Assets/Scenes/Stories/Le lion et le lapin/Lion_Scene8.unity
     guid: 914f4de692ed4b64d8c524e815706686
   - enabled: 1
-    path: Assets/Scenes/Stories/Le lion et le lapin/Scene9.unity
+    path: Assets/Scenes/Stories/Le lion et le lapin/Lion_Scene9.unity
     guid: cec707db48f16694187520d828d927c1
   - enabled: 1
-    path: Assets/Scenes/Stories/Le lion et le lapin/Scene10.unity
+    path: Assets/Scenes/Stories/Le lion et le lapin/Lion_Scene10.unity
     guid: 731a961bfa7aa754fa069cb4dba3b3d6
   - enabled: 1
-    path: Assets/Scenes/Stories/Le lion et le lapin/Scene11.unity
+    path: Assets/Scenes/Stories/Le lion et le lapin/Lion_Scene11.unity
     guid: 6f4cee8f6fedeff4fa097429a7d26bc6
+  - enabled: 1
+    path: Assets/Scenes/Stories/Ringo/RingoScene0.unity
+    guid: 9fa2dc3f7d32e0744b3a3d1efe975927
   - enabled: 1
     path: Assets/Scenes/Stories/Ringo/RingoScene1.unity
     guid: 6f7ec2b10175b9147a0e59321595556e
@@ -91,27 +103,117 @@ EditorBuildSettings:
     guid: 1a50a1091c413804c9fd6c2ce28dfc81
   - enabled: 1
     path: Assets/Scenes/Stories/Ringo/RingoScene15.unity
-    guid: 1b7c234003cf97e4fb6ac3976eb2b941
+    guid: 937be10e75defee49bf25105ef9b328d
   - enabled: 1
-    path: Assets/Scenes/Menu/Menu_games.unity
-    guid: be029aeb342ffb543a2ab872e5789017
+    path: Assets/Scenes/Stories/Ringo/RingoScene16.unity
+    guid: 26cb7b33ad3d76049bac762a65509128
   - enabled: 1
-    path: Assets/Scenes/Mini-games/Leaves.unity
-    guid: ef9b71d1724a2a7489b83b5562231e1f
+    path: Assets/Scenes/Stories/Ringo/RingoScene17.unity
+    guid: a1e7e64f10370b94cb88f1b0fe3bd637
   - enabled: 1
-    path: Assets/Scenes/Data_Analyse/Menu/Choice_student.unity
+    path: Assets/Scenes/Data_Analyse/Menu/Choice_Student_Name.unity
     guid: a817856ffa38eaa488e577a7a68a1ea4
   - enabled: 1
-    path: Assets/Scenes/Data_Analyse/Menu/Menu_games_Analyze.unity
+    path: Assets/Scenes/Data_Analyse/Menu/Menu_Games_Analyze.unity
     guid: 66f3ce3c913440d40a571c7c78843773
   - enabled: 1
-    path: Assets/Scenes/Data_Analyse/Mini-games/Leaves_Analyse.unity
+    path: Assets/Scenes/Data_Analyse/Mini-Games/Leaves_Analyse.unity
     guid: c67f0a05414232a4daad3a553fd82a5f
   - enabled: 1
-    path: Assets/Scenes/Mini-games/Cherche_et_trouve.unity
-    guid: e50258756e1d1854f8b0d1316e370a6f
-  - enabled: 1
-    path: Assets/Scenes/Data_Analyse/Mini-games/Search_and_Find_Analyze.unity
+    path: Assets/Scenes/Data_Analyse/Mini-Games/Search_and_Find_Analyze.unity
     guid: 37e9cdcc5f9ce344f9f23c803f002da8
+  - enabled: 1
+    path: Assets/Scenes/Data_Analyse/Menu/Menu_Stories_Scene_Analyze.unity
+    guid: aeb46e3e2b62eff4ea41108906f0c282
+  - enabled: 1
+    path: Assets/Scenes/Data_Analyse/Stories/Lion_Story2/Lion_Scene0_Analyze.unity
+    guid: c3bdb85d53df3124da269674cc059bc2
+  - enabled: 1
+    path: Assets/Scenes/Data_Analyse/Stories/Lion_Story2/Lion_Scene1_Analyze.unity
+    guid: fe60e919da1024d4a8cd5e2ca70af760
+  - enabled: 1
+    path: Assets/Scenes/Data_Analyse/Stories/Lion_Story2/Lion_Scene2_Analyze.unity
+    guid: 3169cfab17ed1cf478491dc325ad6ef8
+  - enabled: 1
+    path: Assets/Scenes/Data_Analyse/Stories/Lion_Story2/Lion_Scene3_Analyze.unity
+    guid: 6e1b6ea481ebfdb45ae441beb9ced108
+  - enabled: 1
+    path: Assets/Scenes/Data_Analyse/Stories/Lion_Story2/Lion_Scene4_Analyze.unity
+    guid: d6cafea09faf46f4dbe2f83a80c34dc9
+  - enabled: 1
+    path: Assets/Scenes/Data_Analyse/Stories/Lion_Story2/Lion_Scene5_Analyze.unity
+    guid: 0202b47f90896c3489383a8f6a23e8a5
+  - enabled: 1
+    path: Assets/Scenes/Data_Analyse/Stories/Lion_Story2/Lion_Scene6_Analyze.unity
+    guid: 21f5e09bfa3540540a75ebb8f18dfab6
+  - enabled: 1
+    path: Assets/Scenes/Data_Analyse/Stories/Lion_Story2/Lion_Scene7_Analyze.unity
+    guid: 1479267e5843dc447b148e33e8b7d916
+  - enabled: 1
+    path: Assets/Scenes/Data_Analyse/Stories/Lion_Story2/Lion_Scene8_Analyze.unity
+    guid: 00bdcb6ae351583488b36c22652074a5
+  - enabled: 1
+    path: Assets/Scenes/Data_Analyse/Stories/Lion_Story2/Lion_Scene9_Analyze.unity
+    guid: d0870a3d9c6a9da45ae3b2ce71e895f4
+  - enabled: 1
+    path: Assets/Scenes/Data_Analyse/Stories/Lion_Story2/Lion_Scene10_Analyze.unity
+    guid: b5758fbf82bbb264893e386ff621d93a
+  - enabled: 1
+    path: Assets/Scenes/Data_Analyse/Stories/Lion_Story2/Lion_Scene11_Analyze.unity
+    guid: b89e8dc68d7bfe744958d71358fc343d
+  - enabled: 1
+    path: Assets/Scenes/Data_Analyse/Stories/Ringo_Story1/RingoScene0_Analyze.unity
+    guid: 388ca05b16984fe4ea489d4f113b9150
+  - enabled: 1
+    path: Assets/Scenes/Data_Analyse/Stories/Ringo_Story1/RingoScene1_Analyze.unity
+    guid: 43d928a0a45cd4e43b72931974a77b43
+  - enabled: 1
+    path: Assets/Scenes/Data_Analyse/Stories/Ringo_Story1/RingoScene2_Analyze.unity
+    guid: 0554a73f765caac47bceaa4b7beef75d
+  - enabled: 1
+    path: Assets/Scenes/Data_Analyse/Stories/Ringo_Story1/RingoScene3_Analyze.unity
+    guid: 5e303181b47ea7f4e868ff2008efa152
+  - enabled: 1
+    path: Assets/Scenes/Data_Analyse/Stories/Ringo_Story1/RingoScene4_Analyze.unity
+    guid: 5d073bc7948830648964f14e97db726e
+  - enabled: 1
+    path: Assets/Scenes/Data_Analyse/Stories/Ringo_Story1/RingoScene5_Analyze.unity
+    guid: 5eaccea601442ee42842786618d463e3
+  - enabled: 1
+    path: Assets/Scenes/Data_Analyse/Stories/Ringo_Story1/RingoScene6_Analyze.unity
+    guid: 2015c1c941073fb4b98c6eddf96ccab1
+  - enabled: 1
+    path: Assets/Scenes/Data_Analyse/Stories/Ringo_Story1/RingoScene7_Analyze.unity
+    guid: 66537baa59d02234eac6dcd0fbe681bd
+  - enabled: 1
+    path: Assets/Scenes/Data_Analyse/Stories/Ringo_Story1/RingoScene8_Analyze.unity
+    guid: fbd8d1b501c99f3438f19b2c338bf55a
+  - enabled: 1
+    path: Assets/Scenes/Data_Analyse/Stories/Ringo_Story1/RingoScene9_Analyze.unity
+    guid: 982af28432e7b9a4d8cf008143349a8c
+  - enabled: 1
+    path: Assets/Scenes/Data_Analyse/Stories/Ringo_Story1/RingoScene10_Analyze.unity
+    guid: e9d4c9eb11756204880791ffe08880d8
+  - enabled: 1
+    path: Assets/Scenes/Data_Analyse/Stories/Ringo_Story1/RingoScene11_Analyze.unity
+    guid: e013b9524c3e4014fb70e40d81555b21
+  - enabled: 1
+    path: Assets/Scenes/Data_Analyse/Stories/Ringo_Story1/RingoScene12_Analyze.unity
+    guid: 5be6482cea4376f45b5ff1489aec3d34
+  - enabled: 1
+    path: Assets/Scenes/Data_Analyse/Stories/Ringo_Story1/RingoScene13_Analyze.unity
+    guid: 5b3976ad9ce1c9144973f09e6636061d
+  - enabled: 1
+    path: Assets/Scenes/Data_Analyse/Stories/Ringo_Story1/RingoScene14_Analyze.unity
+    guid: 813b9b20fc6453245ae2018d1ad2655b
+  - enabled: 1
+    path: Assets/Scenes/Data_Analyse/Stories/Ringo_Story1/RingoScene15_Analyze.unity
+    guid: 1ee65ddb06f8c5f40957ca1e222d1c99
+  - enabled: 1
+    path: Assets/Scenes/Data_Analyse/Stories/Ringo_Story1/RingoScene16_Analyze.unity
+    guid: 3095cd042a49fef468569ee7ff990dfd
+  - enabled: 1
+    path: Assets/Scenes/Data_Analyse/Stories/Ringo_Story1/RingoScene17_Analyze.unity
+    guid: c1e3923acdcc09c45add13809094cb9f
   m_configObjects:
     com.unity.input.settings: {fileID: 11400000, guid: 244d9dfec5766ff44b640c601b906377, type: 2}

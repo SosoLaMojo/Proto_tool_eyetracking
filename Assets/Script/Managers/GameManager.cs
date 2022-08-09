@@ -66,6 +66,7 @@ public class GameManager : MonoBehaviour
 
     // TODO écrire toute les variables de chaque scène de lecture des livres
     private string book1Scenes = "Ringo";
+    private string book2Scenes = "Lion";
     // etc...
 
     public bool isLevelTwoUnlocked = false;
@@ -150,6 +151,10 @@ public class GameManager : MonoBehaviour
                 StartCoroutine(Wrapper(saveData.gameSearchAndFind.events));
             }
             else if (SceneManager.GetActiveScene().name.Contains(book1Scenes))
+            {
+                StartCoroutine(Wrapper(saveData.gameReading1[currentPage].events));
+            }
+            else if (SceneManager.GetActiveScene().name.Contains(book2Scenes))
             {
                 StartCoroutine(Wrapper(saveData.gameReading1[currentPage].events));
             }

@@ -305,7 +305,7 @@ MonoBehaviour:
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: Lion_Scene1
+          m_StringArgument: Lion_Scene0_Analyze
           m_BoolArgument: 0
         m_CallState: 2
 --- !u!114 &202002367
@@ -1431,7 +1431,7 @@ MonoBehaviour:
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: RingoScene0
+          m_StringArgument: RingoScene0_Analyze
           m_BoolArgument: 0
         m_CallState: 2
 --- !u!114 &2029534145
@@ -1563,7 +1563,7 @@ PrefabInstance:
       objectReference: {fileID: 879699122}
     - target: {fileID: 2301881983203826960, guid: db0de4d547b9aee439e212ce7318f56e, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_StringArgument
-      value: Menu_games
+      value: Menu_games_Analyze
       objectReference: {fileID: 0}
     - target: {fileID: 2301881983203826966, guid: db0de4d547b9aee439e212ce7318f56e, type: 3}
       propertyPath: m_Name
